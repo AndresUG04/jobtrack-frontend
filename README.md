@@ -4,13 +4,13 @@
 ![TypeScript](https://img.shields.io/badge/TypeScript-5-3178C6?style=for-the-badge&logo=typescript&logoColor=white)
 ![React](https://img.shields.io/badge/React-19-61DAFB?style=for-the-badge&logo=react&logoColor=black)
 ![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-4-06B6D4?style=for-the-badge&logo=tailwindcss&logoColor=white)
-![Vercel](https://img.shields.io/badge/Vercel-deploy-000000?style=for-the-badge&logo=vercel&logoColor=white)
+[![Live Demo](https://img.shields.io/badge/Live_Demo-Vercel-000000?style=for-the-badge&logo=vercel&logoColor=white)](https://jobtrack-frontend.vercel.app)
 
 > Web client for the JobTrack API. A job application tracker that lets users register, manage applications through a hiring pipeline, record status history, and review search statistics. Built with the Next.js App Router, TypeScript, and Tailwind CSS, with all form input validated by Zod.
 
+- Live demo: https://jobtrack-frontend.vercel.app
 - Backend repository: https://github.com/AndresUG04/jobtrack-api
 - Live API: https://jobtrack-api-l102.onrender.com
-- Live demo: deploy on Vercel and add the URL here
 
 ## Architecture
 
