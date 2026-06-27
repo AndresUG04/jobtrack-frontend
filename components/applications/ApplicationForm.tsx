@@ -148,10 +148,10 @@ export function ApplicationForm({ application }: ApplicationFormProps) {
         />
       </div>
 
-      <label className="flex items-center gap-2.5 text-sm font-medium text-gray-700">
+      <label className="flex items-center gap-2.5 text-sm font-medium text-slate-700">
         <input
           type="checkbox"
-          className="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-600"
+          className="h-4 w-4 rounded border-slate-300 text-blue-600 focus:ring-blue-600"
           {...register("remote")}
         />
         This is a remote position
@@ -165,7 +165,7 @@ export function ApplicationForm({ application }: ApplicationFormProps) {
         {...register("notes")}
       />
 
-      <div className="flex items-center justify-end gap-3 border-t border-gray-100 pt-5">
+      <div className="flex items-center justify-end gap-3 border-t border-slate-100 pt-5">
         <Button
           type="button"
           variant="secondary"

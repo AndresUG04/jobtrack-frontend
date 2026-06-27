@@ -18,7 +18,7 @@ export function StatusDistribution({ stats }: { stats: Stats }) {
       </CardHeader>
       <CardContent>
         {rows.length === 0 ? (
-          <p className="py-6 text-center text-sm text-gray-500">
+          <p className="py-6 text-center text-sm text-slate-500">
             No applications to chart yet.
           </p>
         ) : (
@@ -29,18 +29,18 @@ export function StatusDistribution({ stats }: { stats: Stats }) {
               return (
                 <li key={status}>
                   <div className="mb-1 flex items-center justify-between text-sm">
-                    <span className="flex items-center gap-2 text-gray-700">
+                    <span className="flex items-center gap-2 text-slate-700">
                       <span
                         className={cn("h-2.5 w-2.5 rounded-full", style.dot)}
                       />
                       {style.label}
                     </span>
-                    <span className="tabular-nums text-gray-500">
+                    <span className="tabular-nums text-slate-500">
                       {count}
-                      <span className="ml-1 text-gray-400">({pct}%)</span>
+                      <span className="ml-1 text-slate-400">({pct}%)</span>
                     </span>
                   </div>
-                  <div className="h-2 w-full overflow-hidden rounded-full bg-gray-100">
+                  <div className="h-2 w-full overflow-hidden rounded-full bg-slate-100">
                     <div
                       className={cn("h-full rounded-full", style.bar)}
                       style={{ width: `${Math.max(pct, 2)}%` }}

@@ -9,16 +9,16 @@ export function ApplicationCard({ application }: { application: Application }) {
   return (
     <Link
       href={`/dashboard/applications/${application.id}`}
-      className="flex items-center justify-between gap-4 rounded-lg border border-gray-100 px-4 py-3 transition-colors hover:border-gray-200 hover:bg-gray-50"
+      className="flex items-center justify-between gap-4 rounded-lg border border-slate-100 px-4 py-3 transition-colors hover:border-slate-200 hover:bg-slate-50"
     >
       <div className="min-w-0">
-        <p className="truncate font-medium text-gray-900">
+        <p className="truncate font-medium text-slate-900">
           {application.position}
         </p>
-        <p className="truncate text-sm text-gray-500">
+        <p className="truncate text-sm text-slate-500">
           {application.companyName}
         </p>
-        <div className="mt-1.5 flex flex-wrap items-center gap-x-3 gap-y-1 text-xs text-gray-400">
+        <div className="mt-1.5 flex flex-wrap items-center gap-x-3 gap-y-1 text-xs text-slate-400">
           {application.location && (
             <span className="inline-flex items-center gap-1">
               <MapPin className="h-3 w-3" />

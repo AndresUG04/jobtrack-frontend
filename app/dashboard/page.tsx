@@ -53,10 +53,10 @@ export default function DashboardPage() {
       {/* Header */}
       <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
         <div>
-          <h1 className="text-2xl font-semibold tracking-tight text-gray-900">
+          <h1 className="text-2xl font-semibold tracking-tight text-slate-900">
             Welcome back, {firstName}
           </h1>
-          <p className="mt-1 text-sm text-gray-500">
+          <p className="mt-1 text-sm text-slate-500">
             Here&apos;s an overview of your job search.
           </p>
         </div>
@@ -73,7 +73,7 @@ export default function DashboardPage() {
       ) : error ? (
         <div className="flex flex-col items-center gap-3 rounded-xl border border-red-100 bg-red-50/50 px-6 py-12 text-center">
           <AlertCircle className="h-8 w-8 text-red-500" />
-          <p className="text-sm text-gray-700">{error}</p>
+          <p className="text-sm text-slate-700">{error}</p>
           <Button variant="secondary" size="sm" onClick={load}>
             <Loader2 className="h-4 w-4" />
             Try again
@@ -92,7 +92,7 @@ export default function DashboardPage() {
                     <CardTitle>Recent applications</CardTitle>
                     <Link
                       href="/dashboard/applications"
-                      className="inline-flex items-center gap-1 text-sm font-medium text-indigo-600 hover:text-indigo-700"
+                      className="inline-flex items-center gap-1 text-sm font-medium text-blue-600 hover:text-blue-700"
                     >
                       View all
                       <ArrowRight className="h-3.5 w-3.5" />
@@ -101,7 +101,7 @@ export default function DashboardPage() {
                   <CardContent>
                     {recent.length === 0 ? (
                       <div className="py-8 text-center">
-                        <p className="text-sm text-gray-500">
+                        <p className="text-sm text-slate-500">
                           No applications yet.
                         </p>
                         <Link
@@ -144,13 +144,13 @@ function DashboardSkeleton() {
         {Array.from({ length: 3 }).map((_, i) => (
           <div
             key={i}
-            className="h-28 animate-pulse rounded-xl border border-gray-200 bg-white"
+            className="h-28 animate-pulse rounded-xl border border-slate-200 bg-white"
           />
         ))}
       </div>
       <div className="grid grid-cols-1 gap-6 lg:grid-cols-5">
-        <div className="h-72 animate-pulse rounded-xl border border-gray-200 bg-white lg:col-span-3" />
-        <div className="h-72 animate-pulse rounded-xl border border-gray-200 bg-white lg:col-span-2" />
+        <div className="h-72 animate-pulse rounded-xl border border-slate-200 bg-white lg:col-span-3" />
+        <div className="h-72 animate-pulse rounded-xl border border-slate-200 bg-white lg:col-span-2" />
       </div>
     </div>
   );

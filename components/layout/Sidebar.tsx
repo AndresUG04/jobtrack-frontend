@@ -19,7 +19,7 @@ export function Sidebar() {
   const pathname = usePathname();
 
   return (
-    <aside className="hidden w-60 shrink-0 border-r border-gray-200 bg-white md:block">
+    <aside className="hidden w-60 shrink-0 border-r border-slate-200 bg-white md:block">
       <nav className="sticky top-16 space-y-1 p-4">
         {navItems.map((item) => {
           const active = item.exact
@@ -32,8 +32,8 @@ export function Sidebar() {
               className={cn(
                 "flex items-center gap-3 rounded-lg px-3 py-2 text-sm font-medium transition-colors",
                 active
-                  ? "bg-indigo-50 text-indigo-700"
-                  : "text-gray-600 hover:bg-gray-50 hover:text-gray-900",
+                  ? "bg-blue-50 text-blue-700"
+                  : "text-slate-600 hover:bg-slate-50 hover:text-slate-900",
               )}
             >
               <item.icon className="h-4.5 w-4.5" />
@@ -51,7 +51,7 @@ export function MobileNav() {
   const pathname = usePathname();
 
   return (
-    <nav className="flex gap-1 border-b border-gray-200 bg-white px-4 py-2 md:hidden">
+    <nav className="flex gap-1 border-b border-slate-200 bg-white px-4 py-2 md:hidden">
       {navItems.map((item) => {
         const active = item.exact
           ? pathname === item.href
@@ -63,8 +63,8 @@ export function MobileNav() {
             className={cn(
               "flex flex-1 items-center justify-center gap-2 rounded-lg px-3 py-2 text-sm font-medium transition-colors",
               active
-                ? "bg-indigo-50 text-indigo-700"
-                : "text-gray-600 hover:bg-gray-50",
+                ? "bg-blue-50 text-blue-700"
+                : "text-slate-600 hover:bg-slate-50",
             )}
           >
             <item.icon className="h-4.5 w-4.5" />

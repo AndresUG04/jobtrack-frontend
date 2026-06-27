@@ -110,7 +110,7 @@ export default function ApplicationDetailPage() {
   if (isLoading) {
     return (
       <div className="flex min-h-[50vh] items-center justify-center">
-        <Loader2 className="h-7 w-7 animate-spin text-indigo-500" />
+        <Loader2 className="h-7 w-7 animate-spin text-blue-500" />
       </div>
     );
   }
@@ -118,10 +118,10 @@ export default function ApplicationDetailPage() {
   if (notFound) {
     return (
       <div className="mx-auto max-w-md py-16 text-center">
-        <p className="text-lg font-semibold text-gray-900">
+        <p className="text-lg font-semibold text-slate-900">
           Application not found
         </p>
-        <p className="mt-1 text-sm text-gray-500">
+        <p className="mt-1 text-sm text-slate-500">
           It may have been deleted, or the link is incorrect.
         </p>
         <Link href="/dashboard/applications" className="mt-5 inline-block">
@@ -138,7 +138,7 @@ export default function ApplicationDetailPage() {
     return (
       <div className="flex flex-col items-center gap-3 rounded-xl border border-red-100 bg-red-50/50 px-6 py-12 text-center">
         <AlertCircle className="h-8 w-8 text-red-500" />
-        <p className="text-sm text-gray-700">{error}</p>
+        <p className="text-sm text-slate-700">{error}</p>
         <Button variant="secondary" size="sm" onClick={load}>
           <Loader2 className="h-4 w-4" />
           Try again
@@ -169,7 +169,7 @@ export default function ApplicationDetailPage() {
     <div className="mx-auto max-w-4xl space-y-6">
       <Link
         href="/dashboard/applications"
-        className="inline-flex items-center gap-1.5 text-sm text-gray-500 hover:text-gray-900"
+        className="inline-flex items-center gap-1.5 text-sm text-slate-500 hover:text-slate-900"
       >
         <ArrowLeft className="h-4 w-4" />
         Back to applications
@@ -179,12 +179,12 @@ export default function ApplicationDetailPage() {
       <div className="flex flex-col gap-4 sm:flex-row sm:items-start sm:justify-between">
         <div className="min-w-0">
           <div className="flex flex-wrap items-center gap-3">
-            <h1 className="text-2xl font-semibold tracking-tight text-gray-900">
+            <h1 className="text-2xl font-semibold tracking-tight text-slate-900">
               {application.position}
             </h1>
             <StatusBadge status={application.status} />
           </div>
-          <p className="mt-1 text-gray-600">{application.companyName}</p>
+          <p className="mt-1 text-slate-600">{application.companyName}</p>
         </div>
         <div className="flex shrink-0 items-center gap-2">
           <Button
@@ -223,17 +223,17 @@ export default function ApplicationDetailPage() {
               <dl className="grid grid-cols-1 gap-x-6 gap-y-5 sm:grid-cols-2">
                 {details.map((d) => (
                   <div key={d.label}>
-                    <dt className="flex items-center gap-1.5 text-xs font-medium uppercase tracking-wide text-gray-400">
+                    <dt className="flex items-center gap-1.5 text-xs font-medium uppercase tracking-wide text-slate-400">
                       <d.icon className="h-3.5 w-3.5" />
                       {d.label}
                     </dt>
-                    <dd className="mt-1 text-sm text-gray-900">
-                      {d.value || <span className="text-gray-400">—</span>}
+                    <dd className="mt-1 text-sm text-slate-900">
+                      {d.value || <span className="text-slate-400">—</span>}
                     </dd>
                   </div>
                 ))}
                 <div className="sm:col-span-2">
-                  <dt className="flex items-center gap-1.5 text-xs font-medium uppercase tracking-wide text-gray-400">
+                  <dt className="flex items-center gap-1.5 text-xs font-medium uppercase tracking-wide text-slate-400">
                     <ExternalLink className="h-3.5 w-3.5" />
                     Job posting
                   </dt>
@@ -243,13 +243,13 @@ export default function ApplicationDetailPage() {
                         href={application.jobUrl}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="inline-flex items-center gap-1 break-all text-indigo-600 hover:text-indigo-700"
+                        className="inline-flex items-center gap-1 break-all text-blue-600 hover:text-blue-700"
                       >
                         {application.jobUrl}
                         <ExternalLink className="h-3.5 w-3.5 shrink-0" />
                       </a>
                     ) : (
-                      <span className="text-gray-400">—</span>
+                      <span className="text-slate-400">—</span>
                     )}
                   </dd>
                 </div>
@@ -263,14 +263,14 @@ export default function ApplicationDetailPage() {
                 <CardTitle>Notes</CardTitle>
               </CardHeader>
               <CardContent>
-                <p className="whitespace-pre-wrap text-sm text-gray-700">
+                <p className="whitespace-pre-wrap text-sm text-slate-700">
                   {application.notes}
                 </p>
               </CardContent>
             </Card>
           )}
 
-          <p className="text-xs text-gray-400">
+          <p className="text-xs text-slate-400">
             Created {formatDateTime(application.createdAt)} · Last updated{" "}
             {formatDateTime(application.updatedAt)}
           </p>
