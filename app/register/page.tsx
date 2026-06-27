@@ -16,23 +16,27 @@ export default function RegisterPage() {
   }, [isLoading, token, router]);
 
   return (
-    <div className="flex min-h-screen flex-col items-center justify-center px-4 py-12">
+    <div className="relative flex min-h-screen flex-col items-center justify-center overflow-hidden px-4 py-12">
+      <div
+        aria-hidden
+        className="pointer-events-none absolute left-1/2 top-[-12rem] -z-10 h-[30rem] w-[44rem] -translate-x-1/2 rounded-full bg-linear-to-br from-brand-200/60 via-sky-200/40 to-transparent blur-3xl"
+      />
       <div className="w-full max-w-md">
         <Link
           href="/"
-          className="mb-8 flex items-center justify-center gap-2 font-semibold text-gray-900"
+          className="mb-8 flex items-center justify-center gap-2 font-bold text-slate-900"
         >
-          <span className="flex h-9 w-9 items-center justify-center rounded-lg bg-indigo-600 text-white">
+          <span className="flex h-9 w-9 items-center justify-center rounded-xl bg-linear-to-b from-brand-500 to-brand-600 text-white shadow-sm shadow-brand-600/30">
             <Briefcase className="h-5 w-5" />
           </span>
           JobTrack
         </Link>
 
-        <div className="rounded-2xl border border-gray-200 bg-white p-6 shadow-sm sm:p-8">
-          <h1 className="text-xl font-semibold text-gray-900">
+        <div className="rounded-2xl border border-slate-200/80 bg-white p-6 shadow-sm shadow-slate-200/50 sm:p-8">
+          <h1 className="text-xl font-semibold text-slate-900">
             Create your account
           </h1>
-          <p className="mt-1 text-sm text-gray-500">
+          <p className="mt-1 text-sm text-slate-500">
             Start tracking your job search in minutes.
           </p>
           <div className="mt-6">
@@ -40,11 +44,11 @@ export default function RegisterPage() {
           </div>
         </div>
 
-        <p className="mt-6 text-center text-sm text-gray-500">
+        <p className="mt-6 text-center text-sm text-slate-500">
           Already have an account?{" "}
           <Link
             href="/login"
-            className="font-medium text-indigo-600 hover:text-indigo-700"
+            className="font-medium text-blue-600 hover:text-blue-700"
           >
             Sign in
           </Link>
