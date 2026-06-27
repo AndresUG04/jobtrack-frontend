@@ -14,19 +14,19 @@ export interface ButtonProps
 
 const variantClasses: Record<Variant, string> = {
   primary:
-    "bg-indigo-600 text-white shadow-sm hover:bg-indigo-700 focus-visible:outline-indigo-600 disabled:bg-indigo-300",
+    "bg-linear-to-b from-brand-500 to-brand-600 text-white shadow-sm shadow-brand-600/20 hover:from-brand-600 hover:to-brand-700 active:from-brand-700 active:to-brand-700 focus-visible:outline-brand-600 disabled:from-brand-300 disabled:to-brand-300 disabled:shadow-none",
   secondary:
-    "bg-white text-gray-700 ring-1 ring-inset ring-gray-300 shadow-sm hover:bg-gray-50 focus-visible:outline-gray-400 disabled:text-gray-400",
+    "bg-white text-slate-700 ring-1 ring-inset ring-slate-200 shadow-xs hover:bg-slate-50 hover:ring-slate-300 focus-visible:outline-slate-400 disabled:text-slate-400",
   destructive:
-    "bg-red-600 text-white shadow-sm hover:bg-red-700 focus-visible:outline-red-600 disabled:bg-red-300",
+    "bg-linear-to-b from-red-500 to-red-600 text-white shadow-sm shadow-red-600/20 hover:from-red-600 hover:to-red-700 focus-visible:outline-red-600 disabled:from-red-300 disabled:to-red-300 disabled:shadow-none",
   ghost:
-    "text-gray-600 hover:bg-gray-100 hover:text-gray-900 focus-visible:outline-gray-400 disabled:text-gray-300",
+    "text-slate-600 hover:bg-slate-100 hover:text-slate-900 focus-visible:outline-slate-400 disabled:text-slate-300",
 };
 
 const sizeClasses: Record<Size, string> = {
   sm: "h-8 px-3 text-sm gap-1.5",
   md: "h-10 px-4 text-sm gap-2",
-  lg: "h-11 px-5 text-base gap-2",
+  lg: "h-11 px-5 text-[15px] gap-2",
 };
 
 export const Button = forwardRef<HTMLButtonElement, ButtonProps>(

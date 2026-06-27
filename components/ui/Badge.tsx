@@ -7,7 +7,7 @@ export interface BadgeProps extends React.HTMLAttributes<HTMLSpanElement> {
 
 export function Badge({
   className,
-  colorClassName = "bg-gray-100 text-gray-700 ring-gray-500/20",
+  colorClassName = "bg-slate-100 text-slate-700 ring-slate-500/20",
   ...props
 }: BadgeProps) {
   return (

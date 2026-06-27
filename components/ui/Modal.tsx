@@ -46,7 +46,7 @@ export function Modal({
       aria-label={title}
     >
       <div
-        className="absolute inset-0 bg-gray-900/40 backdrop-blur-sm"
+        className="absolute inset-0 bg-slate-900/40 backdrop-blur-sm"
         onClick={onClose}
         aria-hidden
       />
@@ -59,16 +59,16 @@ export function Modal({
         <button
           type="button"
           onClick={onClose}
-          className="absolute right-4 top-4 rounded-lg p-1 text-gray-400 transition-colors hover:bg-gray-100 hover:text-gray-600"
+          className="absolute right-4 top-4 rounded-lg p-1 text-slate-400 transition-colors hover:bg-slate-100 hover:text-slate-600"
           aria-label="Close"
         >
           <X className="h-5 w-5" />
         </button>
         {title && (
-          <h2 className="pr-8 text-lg font-semibold text-gray-900">{title}</h2>
+          <h2 className="pr-8 text-lg font-semibold text-slate-900">{title}</h2>
         )}
         {description && (
-          <p className="mt-1 text-sm text-gray-500">{description}</p>
+          <p className="mt-1 text-sm text-slate-500">{description}</p>
         )}
         <div className={cn(title && "mt-4")}>{children}</div>
       </div>
